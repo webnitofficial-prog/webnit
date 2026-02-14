@@ -1,3 +1,4 @@
+/* ================= HERO SECTION ================= */
 .hero {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f172a, #0b3b4a);
@@ -6,38 +7,48 @@
   justify-content: space-between;
   padding: 0 10%;
   color: white;
+  gap: 40px;
 }
 
+
+/* ================= LEFT CONTENT ================= */
 .hero-left {
   max-width: 600px;
+  z-index: 2;
 }
 
+/* BRAND NAME */
 .brand-name {
-  font-size: 80px;
+  font-size: clamp(42px, 7vw, 80px);
   font-weight: 900;
   letter-spacing: 3px;
   line-height: 1.05;
   margin-bottom: 15px;
 }
 
+/* HEADLINE */
 .hero-left h2 {
-  font-size: 64px;
+  font-size: clamp(28px, 5vw, 64px);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
   color: #38bdf8;
 }
 
-
+/* DESCRIPTION */
 .hero-left p {
   margin-bottom: 30px;
   line-height: 1.6;
   opacity: 0.9;
+  font-size: 17px;
 }
 
+
+/* ================= BUTTONS ================= */
 .hero-buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .primary-btn {
@@ -71,15 +82,103 @@
   background: #38bdf8;
   color: #0f172a;
 }
+
+
+/* ================= RIGHT IMAGE ================= */
 .hero-right img {
-  width: 400px;
+  width: clamp(220px, 30vw, 420px);
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: float 4s ease-in-out infinite;
 }
 
 
+/* ================= FLOAT ANIMATION ================= */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
+
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 8%;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 8% 60px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-right img {
+    margin-top: 40px;
+  }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 70px 6% 50px;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+/* keep your existing transition speed */
+/* Reveal Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.65s cubic-bezier(.22,.61,.36,1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.06s; }
+.delay-2 { transition-delay: 0.12s; }
+.delay-3 { transition-delay: 0.18s; }
+.delay-4 { transition-delay: 0.24s; }
