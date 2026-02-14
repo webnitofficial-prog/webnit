@@ -1,9 +1,32 @@
+import React from "react";
+import "./Hero.css";
+import logo from "../assets/webnit-logo.png"; 
+// replace path with your actual logo file location
+
 function Hero() {
   return (
-    <section style={{ background: "#f4f4f4", textAlign: "center" }}>
-      <h1>We Build Modern Websites</h1>
-      <p>High-performance web solutions for your business.</p>
-      <button>Get Started</button>
+    <section className="hero">
+      <div className="hero-left">
+     
+
+        <h2>We Build Modern Websites</h2>
+
+        <p>
+          High-performance web solutions designed to help your business
+          grow online with speed, security, and scalability.
+        </p>
+
+        <div className="hero-buttons">
+          <button className="primary-btn">View Our Work</button>
+          <button className="secondary-btn">Get Started</button>
+        </div>
+      </div>
+<div className="hero-right">
+  <div className="logo-box">
+    <img src={logo} alt="Webnit Logo" />
+  </div>
+</div>
+
     </section>
   );
 }
