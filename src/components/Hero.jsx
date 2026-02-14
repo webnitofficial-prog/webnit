@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import logo from "../assets/webnit-logo.png"; 
+import logo from "../assets/unnamed.jpg"; 
 // replace path with your actual logo file location
 
 function Hero() {
@@ -23,7 +23,7 @@ function Hero() {
       </div>
 <div className="hero-right">
   <div className="logo-box">
-    <img src={logo} alt="Webnit Logo" />
+    <img src={logo} alt="unnamed.jpg" />
   </div>
 </div>
 
