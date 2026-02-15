@@ -3,16 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
 
-  padding: 16px 40px;
-  margin: 20px auto;
+  height: 80px;                 /* FIXED HEIGHT */
+  padding: 0 40px;              /* horizontal only */
+  margin: 0 auto;
+
   width: 90%;
   max-width: 1200px;
 
   background: linear-gradient(135deg, #0f172a, #0b3b4a);
   color: white;
   border-radius: 999px;
-
   border: 2px solid #22c55e;
 
   box-shadow:
@@ -22,7 +24,7 @@
   position: sticky;
   top: 20px;
   z-index: 1000;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* HOVER GLOW */
@@ -39,6 +41,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   white-space: nowrap;
+  line-height: 1; /* prevents height expansion */
 }
 
 
@@ -49,6 +52,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 
@@ -122,7 +126,8 @@
 @media (max-width: 768px) {
 
   .navbar {
-    padding: 14px 25px;
+    height: 70px;
+    padding: 0 25px;
     border-radius: 20px;
   }
 
@@ -137,7 +142,7 @@
   /* MOBILE MENU DROPDOWN */
   .nav-links {
     position: absolute;
-    top: 80px;
+    top: calc(100% + 10px); /* dynamic positioning */
     left: 50%;
     transform: translateX(-50%) translateY(-15px);
 
@@ -175,7 +180,8 @@
 @media (max-width: 480px){
 
   .navbar{
-    padding:12px 18px;
+    height:65px;
+    padding:0 18px;
   }
 
   .logo{
@@ -186,5 +192,4 @@
     gap:18px;
     padding:20px 0;
   }
-
 }

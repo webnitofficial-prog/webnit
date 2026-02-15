@@ -7,7 +7,6 @@ function Navbar() {
   return (
     <nav className="navbar">
 
-      <div className="logo">WebCompany</div>
 
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li onClick={() => setMenuOpen(false)}>Home</li>

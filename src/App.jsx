@@ -8,6 +8,7 @@ import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import StackRow from "./components/StackRow";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Services />
       <Technologies />
       <Portfolio />
+      <StackRow/>
       <Process />
       <Testimonials />
       <Contact />

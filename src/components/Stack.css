@@ -1,0 +1,167 @@
+/* ================= SECTION ================= */
+
+.stack-section{
+  min-height:60vh;
+  background:linear-gradient(135deg,#061d2a,#083544);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.stack-title{
+  color:#22d3ee;
+  font-size:48px;
+  letter-spacing:4px;
+  margin-bottom:60px;
+}
+
+
+/* ================= ROW ================= */
+
+.stack-row{
+  display:flex;
+  gap:70px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+
+
+/* ================= CARD ================= */
+
+.stack-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:.35s ease;
+}
+
+.stack-card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+.stack-card p{
+  margin-top:15px;
+  color:white;
+  font-size:18px;
+}
+
+
+/* ================= BASE LOGO ================= */
+
+.logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  font-weight:bold;
+  position:relative;
+  box-shadow:0 0 25px rgba(0,0,0,.35);
+  transition:.35s;
+}
+
+.logo:hover{
+  transform:scale(1.05);
+}
+
+
+/* ================= MONGO ================= */
+
+.mongo{
+  background:#3c873a;
+}
+
+.mongo::before{
+  content:"";
+  width:18px;
+  height:60px;
+  background:linear-gradient(#7fff7f,#0c5a1e);
+  border-radius:50%;
+}
+
+
+/* ================= EXPRESS ================= */
+
+.express{
+  background:#f0b03f;
+  color:white;
+}
+
+
+/* ================= REACT ================= */
+.react-atom{
+  position:relative;
+  width:90px;
+  height:90px;
+}
+
+.react-atom::before,
+.react-atom::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:3px solid #61dafb;
+  border-radius:50%;
+}
+
+.react-atom::before{ transform:rotate(60deg); }
+.react-atom::after{ transform:rotate(-60deg); }
+
+.dot{
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:#61dafb;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+
+
+
+/* ================= NODE ================= */
+
+.node{
+  background:#3c873a;
+}
+
+.node::before{
+  content:"⬡";
+  color:white;
+  font-size:55px;
+}
+
+
+/* ================= JS ================= */
+
+.js{
+  background:#f7df1e;
+  color:black;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .stack-row{
+    gap:35px;
+  }
+
+  .logo{
+    width:90px;
+    height:90px;
+    font-size:30px;
+  }
+
+  .stack-title{
+    font-size:32px;
+  }
+}

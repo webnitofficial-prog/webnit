@@ -1,0 +1,103 @@
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin:40px;
+  font-family:Arial;
+  font-weight:bold;
+}
+
+/* ---------- REACT ---------- */
+
+.react-logo{
+  position:relative;
+  width:120px;
+  height:120px;
+}
+
+.atom{
+  position:absolute;
+  width:120px;
+  height:40px;
+  border:3px solid #61dafb;
+  border-radius:50%;
+  animation:spin 6s linear infinite;
+}
+
+.atom2{
+  transform:rotate(60deg);
+}
+.atom3{
+  transform:rotate(-60deg);
+}
+
+.nucleus{
+  position:absolute;
+  width:18px;
+  height:18px;
+  background:#61dafb;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* ---------- NODE ---------- */
+
+.node-logo{
+  position:relative;
+}
+
+.hex{
+  width:110px;
+  height:60px;
+  background:#3c873a;
+  position:relative;
+  margin-bottom:10px;
+}
+
+.hex:before,
+.hex:after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:0;
+  border-left:55px solid transparent;
+  border-right:55px solid transparent;
+}
+
+.hex:before{
+  bottom:100%;
+  border-bottom:30px solid #3c873a;
+}
+
+.hex:after{
+  top:100%;
+  border-top:30px solid #3c873a;
+}
+
+.node-logo span{
+  color:#3c873a;
+  font-size:20px;
+}
+
+/* ---------- JS ---------- */
+
+.js-logo{
+  width:110px;
+  height:110px;
+  background:#f7df1e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  color:black;
+  border-radius:12px;
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
